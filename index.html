@@ -62,8 +62,9 @@
 	/*java*/
 	.Centro{ width:1140px; height:700px; margin:0 auto;}
 	.Centro h3{ padding:20px 0;}
-	.Centro li{ width:250px; height:250px; float:left; margin:10px 16px; position:relative; overflow:hidden;}
-	.Centro li span{ width:100%; height:100%; position:absolute; top:0; left:-250px; background:rgba(0,204,255,.5); text-align:center; line-height:250px; font-size:26px; color:#fff;}
+	.Centro #ul1{ position:relative;}
+	.Centro li{ width:250px; height:250px; float:left; margin:10px 16px; position:relative;overflow:hidden;}
+	.Centro li span{ display:block; width:250px; height:250px; position:absolute; top:-250px; left:0px; background:rgba(0,204,255,.5); text-align:center; line-height:250px; font-size:26px; color:#fff;}
 	
 	.contact{ min-width:1140px; height:300px; background:rgba(51,153,153,0.2);}
 	.con_in{ width:1140px; margin:0 auto;}
@@ -161,14 +162,14 @@
 				}
 				var dir = hoverDir(obj,oEvent);
 				//alert(dir);
-				var oS = obj.children[1];
+				var oS = obj.children[1];				
 				//左边 2 右侧0 上边3  下边1
 				switch(dir){
-					case 0:						
+					case 0:
 						oS.style.left = '250px';
 						oS.style.top = 0;
 					break;
-					case 1:						
+					case 1:
 						oS.style.top = '250px';
 						oS.style.left = 0;
 					break;
@@ -176,7 +177,7 @@
 						oS.style.left = '-250px';
 						oS.style.top = 0;
 					break;
-					case 3:						
+					case 3:
 						oS.style.top = '-250px';
 						oS.style.left = 0;
 					break;
@@ -191,7 +192,8 @@
 					return;
 				}
 				var dir = hoverDir(obj,oEvent);
-				var oS = obj.children[1];
+				var oS = obj.children[1];		
+				
 				//左边 2 右侧0 上边3  下边1
 				switch(dir){
 					case 0:
